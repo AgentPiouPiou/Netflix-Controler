@@ -1,6 +1,6 @@
 let action = null;
 
-const API_URL = "https://ton-api-render.onrender.com/action"; // à remplacer
+const API_URL = "https://api-render-xkka.onrender.com/action"; // à remplacer
 
 function triggerAction(type) {
     action = type;
