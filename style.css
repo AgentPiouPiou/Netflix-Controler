@@ -1,22 +1,31 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 100px;
+:root {
+    --bg: #fff;
+    --text: #000;
+    --card: #eee;
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+body.dark {
+    --bg: #121212;
+    --text: #fff;
+    --card: #1e1e1e;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
 }
 
 button {
-    padding: 15px 25px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#status {
-    margin-top: 30px;
-    font-size: 18px;
+    padding: 20px;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+    background: var(--card);
+    color: var(--text);
 }

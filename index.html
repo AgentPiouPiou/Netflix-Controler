@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Contrôleur</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remote</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>Contrôle</h1>
+<div id="login">
+    <input type="password" id="password" placeholder="Mot de passe">
+    <button onclick="login()">Connexion</button>
+</div>
 
-    <div class="buttons">
-        <button onclick="triggerAction('back')">Retour</button>
-        <button onclick="triggerAction('forward')">Avancer</button>
-        <button onclick="triggerAction('play_pause')">Lecture / Pause</button>
-    </div>
+<div id="app" class="hidden">
 
-    <p id="status">Action : null</p>
+<header>
+<h1>Remote</h1>
+<button onclick="toggleTheme()">🌓</button>
+<div id="statusDot"></div>
+</header>
 
-    <script src="script.js"></script>
+<div class="controls">
+<button onclick="send('back')">⬅️</button>
+<button onclick="send('play_pause')">⏯️</button>
+<button onclick="send('forward')">➡️</button>
+</div>
+
+<div class="extra">
+<button onclick="send('shutdown')">⛔</button>
+</div>
+
+</div>
+
+<script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
